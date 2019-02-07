@@ -6,15 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-     ManipulationMode="All"
     Background="PaleVioletRed">
 
     <Grid ManipulationMode="All">
-        <Grid x:Name="LayoutRoot" Background="DeepPink" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" ManipulationMode="All">
-            <Grid x:Name="Root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ManipulationMode="None" Margin="10" Background="DimGray">
-                <Grid x:Name="Area" Background="LightGreen" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
-                    <Grid x:Name="Outer" Background="Plum" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
-                        <Grid x:Name="Inner" Background="Aqua" ManipulationMode="None" HorizontalAlignment="Center" VerticalAlignment="Center"></Grid>
+        <Grid x:Name="LayoutRoot" Background="Black" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" ManipulationMode="All">
+            <Grid x:Name="Root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ManipulationMode="None" Margin="10" Background="Black">
+                <Grid x:Name="Area" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
+                    <Grid x:Name="Outer" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
                         <Grid x:Name="PageControler" Background="Transparent"  ManipulationMode="All" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="1000000"></Grid>
                         <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" x:Name="DebugDot" Stroke="Red" StrokeThickness="4"  Canvas.ZIndex="100001" />
                     </Grid>

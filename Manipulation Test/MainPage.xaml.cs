@@ -43,13 +43,13 @@ namespace Manipulation_Test
             Outer.Height = 3000;
             PageControler.Height = 3000;
             PageControler.Height = 3000;
-            Inner.Width = 1000;
-            Inner.Height = 1000;
             PageControler.Width = 3000;
             PageControler.Height = 3000;
 
-            _transform.ScaleX = .8;
-            _transform.ScaleY = .8;
+            _transform.ScaleX = .3;
+            _transform.ScaleY = .3;
+            _transform.TranslateX = 1050;
+            _transform.TranslateY = 1000;
 
             Area.RenderTransform = _transform;
 
