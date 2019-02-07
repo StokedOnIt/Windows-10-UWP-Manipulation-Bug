@@ -10,3 +10,5 @@ Manipulation works great at first.
 Then double tap and try to manipulate during the pause.
 
 After the Manipulation Center point is wrong in the upper left
+
+This is due to the e.Position coming from the Manipulation being incorrect after.
