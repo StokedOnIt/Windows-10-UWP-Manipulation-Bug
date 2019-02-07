@@ -1,0 +1,7 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Manipulation Test/v15
+/Manipulation Test/bin/x64/Debug
+/Manipulation Test/obj
