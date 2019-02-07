@@ -11,7 +11,7 @@
 
     <Grid ManipulationMode="All">
         <Grid x:Name="LayoutRoot" Background="DeepPink" VerticalAlignment="Stretch"  HorizontalAlignment="Stretch" ManipulationMode="All">
-            <Grid x:Name="PageRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ManipulationMode="None" Margin="10" Background="DimGray">
+            <Grid x:Name="Root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ManipulationMode="None" Margin="10" Background="DimGray">
                 <Grid x:Name="Area" Background="LightGreen" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
                     <Grid x:Name="Outer" Background="Plum" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
                         <Grid x:Name="Inner" Background="Aqua" ManipulationMode="None" HorizontalAlignment="Center" VerticalAlignment="Center"></Grid>

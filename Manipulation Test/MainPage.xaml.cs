@@ -23,7 +23,7 @@ namespace Manipulation_Test
     public sealed partial class MainPage : Page
     {
         double CurrentZoomScale;
-        double PaperRotationOffset;
+        double RotationOffset;
         CompositeTransform _transform = new CompositeTransform();
 
 
@@ -86,7 +86,6 @@ namespace Manipulation_Test
         {
             try
             {
-                ((MainPage)sender).CancelDirectManipulations();
 
 
                 Point point = new Point(
@@ -181,7 +180,7 @@ namespace Manipulation_Test
                 {
                     _transform.Rotation += 360;
                 }
-                    PaperRotationOffset = _transform.Rotation += e.Delta.Rotation;
+                    RotationOffset = _transform.Rotation += e.Delta.Rotation;
 
 
                 _transform.CenterX = point.X;
