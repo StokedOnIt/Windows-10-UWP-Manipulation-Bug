@@ -65,7 +65,7 @@ namespace Manipulation_Test
         private void PageControler_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
 
-            //this simulates a large amount of processing that happens in the background
+            //this simulates a large amount of processing that happens in the background in the DirectX Display Thread
                 var count = 0;
                 for(var i = 0; i < 10000000;i++)
                 {
