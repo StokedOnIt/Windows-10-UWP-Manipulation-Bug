@@ -13,11 +13,12 @@
             <Grid x:Name="Root" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"  ManipulationMode="None" Margin="10" Background="Black">
                 <Grid x:Name="Area" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
                     <Grid x:Name="Outer" Background="Green" HorizontalAlignment="Center" VerticalAlignment="Center" ManipulationMode="None">
-                        <Grid x:Name="PageControler" Background="Transparent"  ManipulationMode="All" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="1000000"></Grid>
+                        <Grid x:Name="Controller" Background="Transparent"  ManipulationMode="All" HorizontalAlignment="Center" VerticalAlignment="Center" Canvas.ZIndex="1000000"></Grid>
                         <Ellipse HorizontalAlignment="Left" VerticalAlignment="Top" Width="20" Height="20" x:Name="DebugDot" Stroke="Red" StrokeThickness="4"  Canvas.ZIndex="100001" />
                     </Grid>
                 </Grid>
             </Grid>
+            <TextBlock x:Name="DebugText" FontSize="20" Text="Double tap on the square, when it turns pink repeatedly tap 2 fingers and slide them like manipulating fast. &#13;Afterward the red circle should be showing in the upper left unstead of between the fingers meaning &#13;the e.Position XY is off and ManipulationStarting has stopped firing." Height="90" VerticalAlignment="Top" MaxLines="3" Foreground="White" HorizontalAlignment="Center" Margin="10,10,10,10" />
         </Grid>
     </Grid>
 </Page>

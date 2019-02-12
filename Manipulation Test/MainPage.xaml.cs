@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -41,10 +43,10 @@ namespace Manipulation_Test
             Area.Height = 3000;
             Outer.Width = 3000;
             Outer.Height = 3000;
-            PageControler.Height = 3000;
-            PageControler.Height = 3000;
-            PageControler.Width = 3000;
-            PageControler.Height = 3000;
+            Controller.Height = 3000;
+            Controller.Height = 3000;
+            Controller.Width = 3000;
+            Controller.Height = 3000;
 
             _transform.ScaleX = .3;
             _transform.ScaleY = .3;
@@ -53,20 +55,23 @@ namespace Manipulation_Test
 
             Area.RenderTransform = _transform;
 
-            PageControler.ManipulationStarting += new ManipulationStartingEventHandler(ManipulateMe_ManipulationStarting);
-            PageControler.ManipulationStarted += new ManipulationStartedEventHandler(ManipulateMe_ManipulationStarted);
-            PageControler.ManipulationDelta += new ManipulationDeltaEventHandler(ManipulateMe_ManipulationDelta);
-            PageControler.ManipulationCompleted += new ManipulationCompletedEventHandler(ManipulateMe_ManipulationCompleted);
+            Controller.ManipulationStarting += new ManipulationStartingEventHandler(ManipulateMe_ManipulationStarting);
+            Controller.ManipulationStarted += new ManipulationStartedEventHandler(ManipulateMe_ManipulationStarted);
+            Controller.ManipulationDelta += new ManipulationDeltaEventHandler(ManipulateMe_ManipulationDelta);
+            Controller.ManipulationCompleted += new ManipulationCompletedEventHandler(ManipulateMe_ManipulationCompleted);
 
-            PageControler.DoubleTapped += PageControler_DoubleTapped;
+            Controller.DoubleTapped += PageControler_DoubleTapped;
 
         }
 
-        private void PageControler_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
+        async private void PageControler_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
 
             //this simulates a large amount of processing that happens in the background in the DirectX Display Thread
-                var count = 0;
+            Area.Background = new SolidColorBrush(Colors.HotPink);
+            Outer.Background = new SolidColorBrush(Colors.HotPink);
+            await Task.Delay(100);
+            var count = 0;
                 for(var i = 0; i < 10000000;i++)
                 {
                     for (var r = 0; r < 100; r++)
@@ -74,7 +79,9 @@ namespace Manipulation_Test
                         count++;
                     }
                     count++;
-                }
+            }
+            Outer.Background = new SolidColorBrush(Colors.Green);
+            Area.Background = new SolidColorBrush(Colors.Green);
         }
 
         async void ManipulateMe_ManipulationStarting(object sender, ManipulationStartingRoutedEventArgs e)
@@ -255,7 +262,7 @@ namespace Manipulation_Test
 
 
 
-                PageControler.CancelDirectManipulations();
+                Controller.CancelDirectManipulations();
             }
             catch (Exception ex)
             {
