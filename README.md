@@ -10,7 +10,8 @@ Compile and start the app in Visual Studio 2017 Version 15.9.5.
 
 Manipulation works great at first.
 
-Then double tap and try to manipulate during the pause.
+Then double tap and try to manipulate quickly multiple times
+by tapping 2 fingers on the screen and sliding during the pause.
 
 After the Manipulation Center point is wrong in the upper left
 
